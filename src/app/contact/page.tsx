@@ -35,11 +35,18 @@ function ContactForm() {
     setSubmitStatus(null);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Send the form data to the API
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // Here you would typically send the form data to your API
-      console.log("Contact form data:", formData);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
 
       setSubmitStatus("success");
       setFormData({
