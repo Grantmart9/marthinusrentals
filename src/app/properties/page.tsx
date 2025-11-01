@@ -165,10 +165,10 @@ function PropertiesContent() {
               </label>
               <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
                 <option>Any Price</option>
-                <option>$0 - $100</option>
-                <option>$100 - $250</option>
-                <option>$250 - $500</option>
-                <option>$500+</option>
+                <option>R0 - R1,800</option>
+                <option>R1,800 - R4,500</option>
+                <option>R4,500 - R9,000</option>
+                <option>R9,000+</option>
               </select>
             </div>
 

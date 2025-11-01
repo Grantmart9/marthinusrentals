@@ -378,29 +378,33 @@ function PropertyDetailPage() {
               {/* Price Breakdown */}
               <div className="border-t pt-4 mt-4 space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span>${property.pricing.baseRate} × nights</span>
-                  <span>${property.pricing.baseRate}</span>
+                  <span>
+                    R{property.pricing.baseRate.toLocaleString()} × nights
+                  </span>
+                  <span>R{property.pricing.baseRate.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Cleaning fee</span>
-                  <span>${property.pricing.cleaningFee}</span>
+                  <span>R{property.pricing.cleaningFee.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Service fee</span>
-                  <span>${property.pricing.serviceFee}</span>
+                  <span>R{property.pricing.serviceFee.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Taxes</span>
-                  <span>${property.pricing.taxes}</span>
+                  <span>R{property.pricing.taxes.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between font-semibold text-base pt-2 border-t">
                   <span>Total</span>
                   <span>
-                    $
-                    {property.pricing.baseRate +
+                    R
+                    {(
+                      property.pricing.baseRate +
                       property.pricing.cleaningFee +
                       property.pricing.serviceFee +
-                      property.pricing.taxes}
+                      property.pricing.taxes
+                    ).toLocaleString()}
                   </span>
                 </div>
               </div>

@@ -23,7 +23,7 @@ const mockBookings: Booking[] = [
     checkIn: "2024-01-15",
     checkOut: "2024-01-20",
     guests: 4,
-    totalPrice: 2450,
+    totalPrice: 44100,
     status: "confirmed",
     createdAt: "2024-01-10T10:00:00Z",
     updatedAt: "2024-01-10T10:00:00Z",
@@ -42,7 +42,7 @@ const mockBookings: Booking[] = [
     checkIn: "2024-02-01",
     checkOut: "2024-02-05",
     guests: 2,
-    totalPrice: 1680,
+    totalPrice: 30240,
     status: "pending",
     createdAt: "2024-01-20T14:30:00Z",
     updatedAt: "2024-01-20T14:30:00Z",
@@ -283,7 +283,7 @@ export default function AdminPage() {
                         Total Revenue
                       </p>
                       <p className="text-2xl font-semibold text-gray-900">
-                        ${stats.totalRevenue.toLocaleString()}
+                        R{stats.totalRevenue.toLocaleString()}
                       </p>
                     </div>
                   </div>
@@ -325,7 +325,7 @@ export default function AdminPage() {
                             {booking.status}
                           </span>
                           <p className="text-sm font-medium text-gray-900 mt-1">
-                            ${booking.totalPrice}
+                            R{booking.totalPrice.toLocaleString()}
                           </p>
                         </div>
                       </div>
@@ -362,7 +362,7 @@ export default function AdminPage() {
                             </span>
                           </div>
                           <p className="text-sm font-medium text-gray-900 mt-1">
-                            ${property.pricing.baseRate}/night
+                            R{property.pricing.baseRate.toLocaleString()}/night
                           </p>
                         </div>
                       </div>
@@ -431,7 +431,7 @@ export default function AdminPage() {
                             {property.location.city}, {property.location.state}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            ${property.pricing.baseRate}/night
+                            R{property.pricing.baseRate.toLocaleString()}/night
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
@@ -547,7 +547,7 @@ export default function AdminPage() {
                               </span>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                              ${booking.totalPrice}
+                              R{booking.totalPrice.toLocaleString()}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                               <div className="flex space-x-2">

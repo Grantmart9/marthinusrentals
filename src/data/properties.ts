@@ -217,22 +217,22 @@ export const sampleProperties: Property[] = [
       ].includes(amenity.id)
     ),
     pricing: {
-      baseRate: 450,
-      currency: "USD",
-      cleaningFee: 150,
-      serviceFee: 45,
-      taxes: 50,
+      baseRate: 8100,
+      currency: "ZAR",
+      cleaningFee: 2700,
+      serviceFee: 810,
+      taxes: 900,
       seasonalRates: [
         {
           startDate: "2024-06-01",
           endDate: "2024-08-31",
-          rate: 550,
+          rate: 9900,
           minimumStay: 3,
         },
         {
           startDate: "2024-12-20",
           endDate: "2025-01-05",
-          rate: 600,
+          rate: 10800,
           minimumStay: 4,
         },
       ],
@@ -245,7 +245,7 @@ export const sampleProperties: Property[] = [
       bathrooms: 3,
       beds: 4,
     },
-    availability: generateAvailability(450),
+    availability: generateAvailability(8100),
     rating: 4.9,
     reviewCount: 127,
     host: {
@@ -333,22 +333,22 @@ export const sampleProperties: Property[] = [
       ].includes(amenity.id)
     ),
     pricing: {
-      baseRate: 280,
-      currency: "USD",
-      cleaningFee: 100,
-      serviceFee: 28,
-      taxes: 35,
+      baseRate: 5040,
+      currency: "ZAR",
+      cleaningFee: 1800,
+      serviceFee: 504,
+      taxes: 630,
       seasonalRates: [
         {
           startDate: "2024-12-01",
           endDate: "2025-03-31",
-          rate: 350,
+          rate: 6300,
           minimumStay: 2,
         },
         {
           startDate: "2024-07-01",
           endDate: "2024-08-31",
-          rate: 320,
+          rate: 5760,
           minimumStay: 2,
         },
       ],
@@ -361,7 +361,7 @@ export const sampleProperties: Property[] = [
       bathrooms: 2,
       beds: 3,
     },
-    availability: generateAvailability(280),
+    availability: generateAvailability(5040),
     rating: 4.8,
     reviewCount: 89,
     host: {

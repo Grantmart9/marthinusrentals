@@ -92,7 +92,7 @@ export function PropertyCard({ property, className = "" }: PropertyCardProps) {
         <div className="flex items-center justify-between">
           <div>
             <span className="text-2xl font-bold text-gray-900">
-              ${property.pricing.baseRate}
+              R{property.pricing.baseRate.toLocaleString()}
             </span>
             <span className="text-gray-600 text-sm"> / night</span>
           </div>
